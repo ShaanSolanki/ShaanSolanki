@@ -56,11 +56,6 @@ Information Technology undergraduate (B.E., 2027) shipping full-stack web apps w
 
 <div align="center">
 
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShaanSolanki&theme=github_dark" alt="GitHub profile summary" />
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ShaanSolanki&theme=github_dark" alt="Top languages" />
-
-<br/><br/>
-
 <sub>Learning by building — pushing past traditional web dev into intelligent systems and next-generation interfaces.</sub>
 
 </div>
