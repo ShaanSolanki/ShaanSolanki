@@ -56,8 +56,8 @@ Information Technology undergraduate (B.E., 2027) shipping full-stack web apps w
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ShaanSolanki&show_icons=true&hide_border=true&hide_title=true&count_private=true&include_all_commits=true&theme=dark&icon_color=A0A0A0&text_color=C0C0C0&bg_color=0D1117" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ShaanSolanki&layout=compact&hide_border=true&hide_title=true&langs_count=8&theme=dark&text_color=C0C0C0&bg_color=0D1117" alt="Top languages" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ShaanSolanki&theme=github_dark" alt="GitHub profile summary" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ShaanSolanki&theme=github_dark" alt="Top languages" />
 
 <br/><br/>
 
