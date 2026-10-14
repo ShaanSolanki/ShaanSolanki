@@ -1,94 +1,38 @@
-<div align="center">
+# Shaan Solanki
 
-<!-- Typing animation header -->
-<a href="https://shaansolanki.dev">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=26&pause=1200&color=A0A0A0&center=true&vCenter=true&width=600&lines=Shaan+Solanki;Full-Stack+Developer;AI+%26+Automation+Engineer" alt="Shaan Solanki" />
-</a>
+Final-year B.E. Information Technology student in Amravati, India. I ship production software for paying clients rather than coursework.
 
-<p>
-  <em>Building intelligent, automation-driven products —<br/>
-  voice systems, real-time apps, and interfaces that feel a step into the future.</em>
-</p>
+Currently at **Synckraft Technologies**, building and maintaining five live client systems end to end: React and Next.js front ends, Python and Node REST services, PostgreSQL and Firestore behind them. Most of my work is the integration layer, and most of what I learn comes from what breaks after release.
 
-<p>
-  <a href="https://shaansolanki.dev"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/shaansolanki"><img src="https://img.shields.io/badge/LinkedIn-0A0A0A?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:shaansolanki17@gmail.com"><img src="https://img.shields.io/badge/Email-0A0A0A?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-  <img src="https://komarev.com/ghpvc/?username=ShaanSolanki&style=flat-square&color=A0A0A0&label=Profile+views" alt="Profile views" />
-</p>
+Most of this is in private client repos, so the commit counts are there to say what share was actually mine.
 
-</div>
+### What I work with
 
----
+**Languages** Python · TypeScript · JavaScript · SQL
+**Frontend** React · Next.js (App Router) · Tailwind · TanStack Query
+**Backend** FastAPI · Pydantic · SQLAlchemy · Node.js · Express
+**Data** PostgreSQL · SQLite · MongoDB · Firestore · Redis
+**Testing** pytest · Hypothesis · Vitest · fast-check · mypy strict · Ruff
+**Infra** Docker · GitHub Actions · Linux
 
-### About
+### Things I have built
 
-Information Technology undergraduate (B.E., 2027) shipping full-stack web apps with **Next.js**, **Node/Express**, and **MongoDB**, plus LLM-powered voice and WhatsApp automation. I combine design, AI, and engineering to solve real problems — and learn by building ambitious things.
+**Pragati Bakery** — warehouse and outlet system for a bakery chain, one warehouse and ten outlets on a single deployment. The client's problem was staff overcharging at the counter, so the whole system is built around one rule: the warehouse sets prices and an outlet has no write permission on the price column in Postgres. Hiding the field in the UI would not have been enough. Billing also has to survive the internet dropping, so the POS is an Android app over Capacitor, billing into on-device SQLite and syncing through an outbox. *112 of 357 commits mine, across the POS app, the API and the database.*
 
-```yaml
-role:     Automation Engineer @ Synckraft Technologies
-focus:    AI agents · voice & WhatsApp automation · real-time SaaS
-building: LLM-driven CRM and outreach systems
-learning: intelligent systems & next-generation interfaces
-open to:  full-stack & AI/automation engineering roles
-```
+**Ordrji Desktop** — Windows point of sale that runs a restaurant's entire billing counter with the internet unplugged, prints on thermal hardware and serves the shop's tablets and kitchen screen over local WiFi. I built billing, discounts behind a manager PIN, hold and resume, refund notes, and a table board with locking and shift, merge and split. Also the fault-injection harness that kills the server mid-bill and asserts what survived. *95 of 192 commits mine.*
 
----
+**Carbon-Aware Compute Scheduler** — LightGBM forecasts grid carbon 48 hours ahead and an OR-Tools CP-SAT solver picks the cleanest slot inside each job's deadline: 7.88% lower emissions and zero deadline violations over an 840-job week. The part I would defend in review is that the deadline guard never consults the model, so feeding a deliberately inverted forecast drives the saving to -15.3% and still produces zero violations. 21,900 lines under Ruff and mypy strict, 58 pytest modules.
 
-### Tech Stack
+**PaySheet** — payroll and income-tax suite running on 6,700+ real payslips. Parses government portal HTML into a structured schema, then flags duplicate records and net-pay mismatches before anything is disbursed. Started as a PySide6 desktop tool and grew into a multi-user FastAPI app with a TDS engine.
 
-**Languages**
-<br/>
-<img src="https://skillicons.dev/icons?i=ts,js,python&theme=dark" height="42" alt="Languages" />
+**[Voicera](https://github.com/ShaanSolanki/Voicera)** — an inbound voice agent on LiveKit, so a WebRTC audio path, with Sarvam for speech-to-text and text-to-speech and an LLM deciding the reply, grounded in the business's own records. Built for callers who switch between Hindi, Marathi and English inside one sentence, which generic models transcribe into nonsense.
 
-**Frontend**
-<br/>
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind&theme=dark" height="42" alt="Frontend" />
+**[CivicFlow](https://github.com/ShaanSolanki/CIVICFLOW)** — MERN civic grievance platform. Express and Mongoose with JWT and role-based access, two React front ends (a citizen reporting app with a Leaflet map picker, and a staff console with analytics and a density heat map), and a Python service that classifies and prioritises complaints.
 
-**Backend & Data**
-<br/>
-<img src="https://skillicons.dev/icons?i=nodejs,express,firebase,supabase,mongodb&theme=dark" height="42" alt="Backend and Data" />
+### Open source
 
-**Tools & DevOps**
-<br/>
-<img src="https://skillicons.dev/icons?i=git,github,linux,vercel,postman&theme=dark" height="42" alt="Tools and DevOps" />
+**[bolna-ai/bolna#1130](https://github.com/bolna-ai/bolna/pull/1130)** — a multilingual voice agent went mute for the rest of a call whenever its TTS websocket closed and reconnected, because the synthesizer pool read the socket only once. Fixed the forwarder to re-enter, with a cap so a dead provider cannot spin it, plus four regression tests.
 
-**AI & Automation** &nbsp;·&nbsp; LLM API integration &nbsp;·&nbsp; Prompt engineering &nbsp;·&nbsp; Voice & WhatsApp automation
+### Reach me
 
----
-
-### Featured Projects
-
-| Project | Description | Stack |
-| :--- | :--- | :--- |
-| **[Voicera](https://voicera-ten.vercel.app/agents)** | AI voice agents that contact leads and auto-reply in seconds | Next.js · LLM · WhatsApp API |
-| **[Solaroft](https://solaroft.com)** | Solar service platform with role-based access across 5 roles | Next.js · Firebase |
-| **[E-Cell PRMITR](https://ecell.prmitr.in)** | Event management platform for a college entrepreneurship cell | Next.js · Firebase |
-| **[Perfume Store](https://perfume-e-commerse.vercel.app)** | E-commerce platform with cart and checkout | React · Next.js |
-| **[Harmony Music](https://song-hazel-nu.vercel.app)** | Music streaming app with a clean, responsive UI | React |
-| **[CADTech](https://cadtech.co.in)** | Business website with responsive design | Next.js |
-
-**Selected work** *(private / case studies)*
-
-- **Voice Automation CRM** — voice + WhatsApp system that contacts leads and auto-replies via an LLM using business context, with a centralized dashboard tracking status across channels. &nbsp;`Next.js · Firebase · LLM · WhatsApp API`
-- **Deepfake Detection System** — AI pipeline that classifies manipulated vs. authentic media for content verification. &nbsp;`Python`
-
----
-
-### Experience
-
-**Synckraft Technologies** — *Automation Engineer* · 2025 – Present
-<br/>
-Ship full-stack apps with Next.js + Firebase/Supabase, build AI-driven CRM & lead-tracking workflows, and deploy/manage apps on Linux VPS.
-
-**CodElevate Technologies** — *Software Intern (Python)* · Mar – May 2025
-<br/>
-Built an interactive Power BI dashboard on a 9K-row dataset and ran EDA on 911 emergency-call data with Pandas/NumPy.
-
----
-
-<div align="center">
-
-<sub>Learning by building — pushing past traditional web dev into intelligent systems and next-generation interfaces.</sub>
-
-</div>
+[shaansolanki.dev](https://shaansolanki.dev) · [LinkedIn](https://www.linkedin.com/in/shaansolanki) · shaansolanki17@gmail.com
